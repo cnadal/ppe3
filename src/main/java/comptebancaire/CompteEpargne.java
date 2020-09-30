@@ -10,5 +10,32 @@ package comptebancaire;
  * @author c.nadal
  */
 public class CompteEpargne extends CompteBancaire {
+ private   Float tauxInterets;
+private Float montantPlafond;
+
+/**
+ * 
+ * @param tauxInterets
+ * @param montantPlafond
+ * @param numeroCompte
+ * @param soldeCompte
+ * @param leClient 
+ */
+    public CompteEpargne(Float tauxInterets,Float montantPlafond, Integer numeroCompte, Float soldeCompte, Client leClient) {
+        super(numeroCompte, soldeCompte, leClient);
+        this.tauxInterets=tauxInterets;
+        this.montantPlafond=montantPlafond;
+    }
+
+
+    
+    
+    public Float getTauxInterets() {
+        return tauxInterets;
+    }
+
+    public void setTauxInterets(Float tauxInterets) {
+        this.tauxInterets = tauxInterets;
+    }
     
 }
